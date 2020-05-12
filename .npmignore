@@ -1,3 +1,11 @@
+.github/
+.nyc_output/
+coverage/
 src/
 test/
+.babelrc
+.coveralls.yml
+.gitattributes
+.tool-versions
+README.md
 nyc.config.js
