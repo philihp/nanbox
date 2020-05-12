@@ -1,3 +1,8 @@
+[![Version](https://img.shields.io/npm/v/nanbox)](https://www.npmjs.com/package/nanbox)
+![Tests](https://github.com/philihp/nanbox/workflows/tests/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/philihp/nanbox/badge.svg?branch=master&force=reload)](https://coveralls.io/github/philihp/nanbox?branch=master)
+![License](https://img.shields.io/npm/l/nanbox)
+
 # Nan-box
 
 IEEE 754 encodes 32-bit floating points with 1 bit for the sign, 8 bits for the exponent, and 23 bits for the number part (mantissa). For the specific case of NaN (e.g. the result of dividing 0 by 0, or the square root of a negative number), the spec encodes this as `11111111` in the exponent. The sign and the mantissa can be anything, and the spec suggests this can be used for "diagnostic information". One/some of these bits is/are commonly used to indicate a quiet NaN (qNaN) which could be expected vs. a signaling NaN (sNaN) which could be unexpected and should trigger an halting exception. This behavior is however sometimes different on different hardware.
