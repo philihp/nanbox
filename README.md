@@ -20,7 +20,7 @@ npm install --save nanbox
 Use the named function `toNaN` to wrap your clandestine characters in NaNs, and then `fromNaN` to take them back out.
 
 ```javascript
-import nanbox, { fromNaN, toNaN } from 'nanbox'
+import { fromNaN, toNaN } from 'nanbox'
 
 const data = '酷'.codePointAt(0)
 // => 0x9177
@@ -33,6 +33,8 @@ const unboxed = fromNaN(boxed)
 You could use this to encode your string as an array of NaNs. There's also the generic default function `nanbox`, which will detect which way you want to go.
 
 ```javascript
+import nanbox from 'nanbox'
+
 const str = '我的氣墊船裝滿了鰻魚'
 const arr = str
   .split('')
