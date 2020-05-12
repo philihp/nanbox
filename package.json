@@ -4,10 +4,12 @@
   "description": "Encode hidden data within NaN IEEE 754 floats",
   "scripts": {
     "build": "babel src -d dist",
+    "prepublish": "npm run build",
     "lint": "eslint .",
     "release": "np",
     "test": "nyc ava"
   },
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/philihp/nanbox.git"
