@@ -63,12 +63,7 @@
     ],
     "parser": "babel-eslint",
     "rules": {
-      "no-unused-vars": [
-        "error",
-        {
-          "argsIgnorePattern": "^_"
-        }
-      ]
+      "no-bitwise": "off"
     }
   },
   "ava": {
