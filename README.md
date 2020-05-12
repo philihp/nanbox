@@ -30,13 +30,16 @@ const unboxed = fromNaN(boxed)
 // => 0x9177
 ```
 
-You could use this to encode your string as an array of NaNs.
+You could use this to encode your string as an array of NaNs. There's also the generic default function `nanbox`, which will detect which way you want to go.
 
 ```javascript
 const str = '我的氣墊船裝滿了鰻魚'
-const arr = str.split('').map((c) => toNaN(c.codePointAt(0)))
+const arr = str
+  .split('')
+  .map((c) => c.codePointAt(0))
+  .map(nanbox)
 // => [ NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN ]
-String.fromCodePoint(...arr.map((n) => fromNaN(n)))
+String.fromCodePoint(...arr.map(nanbox))
 // => '我的氣墊船裝滿了鰻魚'
 ```
 

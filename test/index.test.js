@@ -44,7 +44,10 @@ test('detects which direction', (t) => {
 
 test('encodes a string', (t) => {
   const str = '我的氣墊船裝滿了鰻魚'
-  const arr = str.split('').map((c) => toNaN(c.codePointAt(0)))
-  const out = String.fromCodePoint(...arr.map((n) => fromNaN(n)))
+  const arr = str
+    .split('')
+    .map((c) => c.codePointAt(0))
+    .map(nanbox)
+  const out = String.fromCodePoint(...arr.map(nanbox))
   t.is(str, out)
 })
