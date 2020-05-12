@@ -41,3 +41,10 @@ test('detects which direction', (t) => {
   const output = nanbox(packet)
   t.is(output, input)
 })
+
+test('encodes a string', (t) => {
+  const str = '我的氣墊船裝滿了鰻魚'
+  const arr = str.split('').map((c) => toNaN(c.codePointAt(0)))
+  const out = String.fromCodePoint(...arr.map((n) => fromNaN(n)))
+  t.is(str, out)
+})
