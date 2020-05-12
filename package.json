@@ -1,5 +1,5 @@
 {
-  "name": "nanpack",
+  "name": "nanbox",
   "version": "0.0.0",
   "description": "Encode hidden data within NaN IEEE 754 floats",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/philihp/nanpack.git"
+    "url": "git+https://github.com/philihp/nanbox.git"
   },
   "keywords": [
     "nan",
@@ -20,9 +20,9 @@
   "author": "Philihp Busby <philihp@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/philihp/nanpack/issues"
+    "url": "https://github.com/philihp/nanbox/issues"
   },
-  "homepage": "https://github.com/philihp/nanpack#readme",
+  "homepage": "https://github.com/philihp/nanbox#readme",
   "devDependencies": {
     "@ava/babel": "1.0.1",
     "@babel/cli": "7.8.4",
