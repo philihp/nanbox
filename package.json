@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/philihp/nanbox#readme",
   "devDependencies": {
-    "@ava/babel": "1.0.1",
     "@babel/cli": "7.10.1",
     "@babel/core": "7.10.2",
     "@babel/preset-env": "7.10.2",
