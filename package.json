@@ -5,7 +5,7 @@
   "scripts": {
     "build": "babel src -d dist",
     "prepare": "npm run build",
-    "lint": "eslint .",
+    "lint": "eslint src",
     "release": "np",
     "test": "jest",
     "test:coverage": "jest --coverage"
