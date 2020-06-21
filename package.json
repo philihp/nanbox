@@ -55,13 +55,13 @@
       "@philihp"
     ],
     "rules": {
-      "no-bitwise": "off",
-      "unicorn/number-literal-case": 0,
-      "unicorn/no-fn-reference-in-iterator": 0
+      "no-bitwise": "off"
     }
   },
   "jest": {
-    "rootDir": "src"
+    "modulePathIgnorePatterns": [
+      "dist/"
+    ]
   },
   "dependencies": {}
 }
