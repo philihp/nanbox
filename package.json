@@ -11,6 +11,7 @@
     "test:coverage": "jest --coverage"
   },
   "main": "./dist/index.js",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/philihp/nanbox.git"
