@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/philihp/nanbox#readme",
   "devDependencies": {
-    "@babel/cli": "7.13.10",
-    "@babel/core": "7.13.13",
+    "@babel/cli": "7.13.14",
+    "@babel/core": "7.13.14",
     "@babel/preset-env": "7.13.12",
     "@philihp/eslint-config": "4.3.0",
     "husky": "5.2.0",
