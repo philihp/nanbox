@@ -1,4 +1,5 @@
 [![Version](https://img.shields.io/npm/v/nanbox)](https://www.npmjs.com/package/nanbox)
+[![Dependencies](https://img.shields.io/librariesio/github/philihp/nanbox)](https://libraries.io/github/philihp/nanbox)
 ![Tests](https://github.com/philihp/nanbox/workflows/tests/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/philihp/nanbox/badge.svg?branch=master&force=reload)](https://coveralls.io/github/philihp/nanbox?branch=master)
 ![License](https://img.shields.io/npm/l/nanbox)
