@@ -9,7 +9,7 @@ jobs:
       matrix:
         node-version: [10.x, 11.x, 12.x, 13.x, 14.x, 15.x, 16.x]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
@@ -22,7 +22,7 @@ jobs:
   coverage:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
         with:
           node-version: 16.x
