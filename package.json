@@ -29,7 +29,7 @@
   "homepage": "https://github.com/philihp/nanbox#readme",
   "devDependencies": {
     "@babel/cli": "7.19.3",
-    "@babel/core": "7.19.3",
+    "@babel/core": "7.19.6",
     "@babel/preset-env": "7.19.4",
     "@philihp/eslint-config": "6.0.2",
     "eslint": "8.25.0",
