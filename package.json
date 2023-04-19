@@ -11,6 +11,10 @@
     "test:coverage": "jest --coverage"
   },
   "main": "./dist/index.js",
+  "files": [
+    "/dist",
+    "!/dist/**/__tests__/*"
+  ],
   "sideEffects": false,
   "repository": {
     "type": "git",
