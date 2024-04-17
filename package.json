@@ -56,18 +56,5 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "eslintConfig": {
-    "extends": [
-      "@philihp"
-    ],
-    "rules": {
-      "no-bitwise": "off"
-    }
-  },
-  "jest": {
-    "modulePathIgnorePatterns": [
-      "dist/"
-    ]
   }
 }
