@@ -9,7 +9,7 @@
     "lint": "eslint",
     "release": "np",
     "test": "node --test **/__tests__/*.test.js",
-    "test:coverage": "node --test --experimental-test-coverage **/__tests__/*.test.js"
+    "test:coverage": "NODE_V8_COVERAGE=coverage c8 --reporter=lcov node --test --experimental-test-coverage **/__tests__/*.test.js"
   },
   "main": "./dist/index.cjs",
   "exports": {
@@ -41,6 +41,7 @@
   "devDependencies": {
     "@eslint/js": "9.6.0",
     "@philihp/prettier-config": "1.0.0",
+    "c8": "10.1.2",
     "esbuild": "0.23.0",
     "eslint": "9.6.0",
     "globals": "15.8.0",
