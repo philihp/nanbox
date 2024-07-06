@@ -1,24 +1,12 @@
-const js = require('@eslint/js')
+import globals from "globals";
+import pluginJs from "@eslint/js";
 
-module.exports = [
-  js.configs.recommended,
+export default [
+  { languageOptions: { globals: {...globals.browser, ...globals.node} } },
+  pluginJs.configs.recommended,
   {
-    files: ['**/__tests__/*.js'],
-    languageOptions: {
-      globals: {
-        it: 'readonly',
-        expect: 'readonly',
-        describe: 'readonly',
-      },
-    },
-  },
-  {
-    files: ['eslint.config.js'],
-    languageOptions: {
-      globals: {
-        require: 'readonly',
-        module: 'readonly',
-      },
-    },
-  },
-]
+    rules: {
+      "no-constant-binary-expression": "off"
+    }
+  }
+];
