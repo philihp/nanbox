@@ -1,4 +1,4 @@
-const js = require('@eslint/js')
+import js from '@eslint/js'
 
 module.exports = [
   js.configs.recommended,
