@@ -1,6 +1,6 @@
 {
   "name": "nanbox",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Encode hidden data within NaN IEEE 754 floats",
   "type": "module",
   "scripts": {
