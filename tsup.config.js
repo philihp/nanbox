@@ -1,9 +1,9 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  entry: ["src/", "!src/**/__tests__/**", "!src/**/*.test.*"],
+  entry: ['src/', '!src/**/__tests__/**', '!src/**/*.test.*'],
   splitting: false,
-  sourcemap: "inline",
+  sourcemap: 'inline',
   clean: true,
-  format: ["cjs","esm"]
+  format: ['cjs', 'esm'],
 })
