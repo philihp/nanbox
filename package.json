@@ -8,7 +8,8 @@
     "prepare": "npm run build",
     "lint": "eslint",
     "release": "np",
-    "test": "node --test **/__tests__/*.test.js"
+    "test": "node --test **/__tests__/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage **/__tests__/*.test.js"
   },
   "main": "./dist/index.cjs",
   "exports": {
