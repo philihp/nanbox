@@ -39,6 +39,7 @@
   "homepage": "https://github.com/philihp/nanbox#readme",
   "devDependencies": {
     "@eslint/js": "9.6.0",
+    "@philihp/prettier-config": "^1.0.0",
     "esbuild": "0.23.0",
     "eslint": "9.6.0",
     "globals": "15.8.0",
@@ -49,10 +50,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "semi": false,
-    "trailingComma": "es5"
   }
 }
