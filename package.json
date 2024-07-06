@@ -10,7 +10,7 @@
     "pretty": "prettier --write **/*.{js,json}",
     "release": "np",
     "test": "node --test **/__tests__/*.test.js",
-    "test:coverage": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=coverage.lcov **/__tests__/*.test.js"
+    "test:coverage": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=coverage.lcov --test-reporter=spec --test-reporter-destination=stdout **/__tests__/*.test.js"
   },
   "main": "./dist/index.cjs",
   "exports": {
