@@ -49,6 +49,9 @@
     "prettier": "3.3.2",
     "tsup": "8.1.0"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "prettier": {
     "singleQuote": true,
     "semi": false,
