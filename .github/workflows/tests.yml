@@ -38,5 +38,6 @@ jobs:
       - run: npm run test:coverage
       - name: Coveralls
         uses: coverallsapp/github-action@master
+        file: coverage.lcov
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
