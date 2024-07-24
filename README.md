@@ -1,4 +1,5 @@
 [![Version](https://img.shields.io/npm/v/nanbox)](https://www.npmjs.com/package/nanbox)
+[![tests](https://github.com/philihp/nanbox/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/philihp/nanbox/actions/workflows/tests.yml)
 ![Tests](https://github.com/philihp/nanbox/workflows/tests/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/philihp/nanbox/badge.svg?branch=main&force=reload)](https://coveralls.io/github/philihp/nanbox?branch=main)
 ![License](https://img.shields.io/npm/l/nanbox)
