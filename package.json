@@ -46,7 +46,7 @@
     "eslint": "9.9.1",
     "globals": "15.9.0",
     "husky": "9.1.5",
-    "lint-staged": "15.2.9",
+    "lint-staged": "15.2.10",
     "prettier": "3.3.3",
     "tsup": "8.2.4",
     "typescript": "5.5.4"
