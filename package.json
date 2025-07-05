@@ -44,7 +44,7 @@
     "@philihp/prettier-config": "1.0.0",
     "esbuild": "0.25.5",
     "eslint": "9.30.0",
-    "globals": "16.2.0",
+    "globals": "16.3.0",
     "husky": "9.1.7",
     "lint-staged": "16.1.2",
     "prettier": "3.6.2",
