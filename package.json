@@ -42,7 +42,7 @@
   "devDependencies": {
     "@eslint/js": "9.33.0",
     "@philihp/prettier-config": "1.0.0",
-    "esbuild": "0.25.8",
+    "esbuild": "0.25.9",
     "eslint": "9.33.0",
     "globals": "16.3.0",
     "husky": "9.1.7",
