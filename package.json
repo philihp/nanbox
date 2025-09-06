@@ -40,10 +40,10 @@
   },
   "homepage": "https://github.com/philihp/nanbox#readme",
   "devDependencies": {
-    "@eslint/js": "9.34.0",
+    "@eslint/js": "9.35.0",
     "@philihp/prettier-config": "1.0.0",
     "esbuild": "0.25.9",
-    "eslint": "9.34.0",
+    "eslint": "9.35.0",
     "globals": "16.3.0",
     "husky": "9.1.7",
     "lint-staged": "16.1.6",
