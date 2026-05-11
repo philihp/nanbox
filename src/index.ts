@@ -1,22 +1,21 @@
-export const fromNaN = (input) => {
-  const ab = new ArrayBuffer(4)
-  const fb = new Float32Array(ab)
-  const ib = new Int32Array(ab)
-  fb[0] = input
-  return ib[0] & 0x3fffff
+const buffer = new ArrayBuffer(4)
+const floatView = new Float32Array(buffer)
+const intView = new Int32Array(buffer)
+
+const QUIET_NAN_MASK = 0x7fc00000
+const PAYLOAD_MASK = 0x3fffff
+
+export const fromNaN = (input: number): number => {
+  floatView[0] = input
+  return intView[0] & PAYLOAD_MASK
 }
 
-export const toNaN = (input) => {
-  const ab = new ArrayBuffer(4)
-  const fb = new Float32Array(ab)
-  const ib = new Int32Array(ab)
-  ib[0] = input | 0x7fc00000
-  return fb[0]
+export const toNaN = (input: number): number => {
+  intView[0] = input | QUIET_NAN_MASK
+  return floatView[0]
 }
 
-export default (input) => {
-  if (Number.isNaN(input)) {
-    return fromNaN(input)
-  }
-  return toNaN(input)
-}
+const nanbox = (input: number): number =>
+  Number.isNaN(input) ? fromNaN(input) : toNaN(input)
+
+export default nanbox

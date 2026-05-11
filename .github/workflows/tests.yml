@@ -8,9 +8,8 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 18.x # maintainence ends 2025-04-30
-          - 20.x # maintainence ends 2026-04-30
-          - 22.x # maintainence ends 2027-04-30
+          - 22.x # active LTS, maintenance ends 2027-04-30
+          - 24.x # active LTS, maintenance ends 2028-04-30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -19,6 +18,7 @@ jobs:
           cache: npm
           cache-dependency-path: package.json
       - run: npm install
+      - run: npm run typecheck
       - run: npm run build --if-present
       - run: npm test
         env:
@@ -30,13 +30,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: 24.x
           cache: npm
           cache-dependency-path: package.json
       - run: npm install
       - run: npm run test:coverage
       - name: Coveralls
-        uses: coverallsapp/github-action@master
+        uses: coverallsapp/github-action@v2
         with:
-          path-to-lcov: coverage.lcov
+          file: coverage.lcov
           github-token: ${{ secrets.GITHUB_TOKEN }}
