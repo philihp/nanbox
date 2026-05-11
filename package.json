@@ -7,16 +7,19 @@
     "build": "tsup",
     "prepare": "npm run build",
     "lint": "eslint",
-    "pretty": "prettier --write **/*.{js,json}",
+    "typecheck": "tsc --noEmit",
+    "pretty": "prettier --write **/*.{ts,js,json}",
     "release": "np",
-    "test": "node --test **/__tests__/*.test.js",
-    "test:coverage": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=coverage.lcov --test-reporter=spec --test-reporter-destination=stdout **/__tests__/*.test.js"
+    "test": "node --experimental-strip-types --test src/**/__tests__/*.test.ts",
+    "test:coverage": "node --experimental-strip-types --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=coverage.lcov --test-reporter=spec --test-reporter-destination=stdout src/**/__tests__/*.test.ts"
   },
   "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "files": [
@@ -42,6 +45,7 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@philihp/prettier-config": "1.0.0",
+    "@types/node": "22.10.5",
     "esbuild": "0.28.0",
     "eslint": "10.3.0",
     "globals": "17.6.0",
@@ -52,6 +56,6 @@
     "typescript": "6.0.3"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.6.0"
   }
 }
