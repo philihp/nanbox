@@ -5,3 +5,5 @@ coverage/
 *.swp
 package-lock.json
 coverage.lcov
+pnpm-lock.yaml
+pnpm-workspace.yaml
