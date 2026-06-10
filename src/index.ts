@@ -15,7 +15,6 @@ export const toNaN = (input: number): number => {
   return floatView[0]
 }
 
-const nanbox = (input: number): number =>
-  Number.isNaN(input) ? fromNaN(input) : toNaN(input)
+const nanbox = (input: number): number => (Number.isNaN(input) ? fromNaN(input) : toNaN(input))
 
 export default nanbox
