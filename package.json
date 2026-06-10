@@ -4,7 +4,7 @@
   "description": "Encode hidden data within NaN IEEE 754 floats",
   "type": "module",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "build": "tsup src/index.ts --format esm,cjs --clean && tsup src/index.ts --format esm --dts-only",
     "prepare": "husky",
     "prepublishOnly": "npm run build",
     "lint": "eslint",
