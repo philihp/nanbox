@@ -1,12 +1,4 @@
 import globals from 'globals'
-import pluginJs from '@eslint/js'
+import js from '@eslint/js'
 
-export default [
-  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
-  pluginJs.configs.recommended,
-  {
-    rules: {
-      'no-constant-binary-expression': 'off',
-    },
-  },
-]
+export default [{ ignores: ['dist/'] }, js.configs.recommended, { languageOptions: { globals: globals.node } }]

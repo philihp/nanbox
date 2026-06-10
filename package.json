@@ -4,26 +4,34 @@
   "description": "Encode hidden data within NaN IEEE 754 floats",
   "type": "module",
   "scripts": {
-    "build": "tsup",
-    "prepare": "npm run build",
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "prepare": "husky",
+    "prepublishOnly": "npm run build",
     "lint": "eslint",
-    "pretty": "prettier --write **/*.{js,json}",
+    "typecheck": "tsc --noEmit",
+    "pretty": "prettier --write **/*.{ts,js,json}",
     "release": "np",
-    "test": "node --test **/__tests__/*.test.js",
-    "test:coverage": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=coverage.lcov --test-reporter=spec --test-reporter-destination=stdout **/__tests__/*.test.js"
+    "test": "node --experimental-strip-types --test src/**/__tests__/*.test.ts",
+    "test:coverage": "node --experimental-strip-types --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=coverage.lcov --test-reporter=spec --test-reporter-destination=stdout src/**/__tests__/*.test.ts"
   },
   "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "files": [
-    "/dist",
-    "!/dist/**/__tests__/*"
+    "dist"
   ],
   "sideEffects": false,
+  "prettier": "@philihp/prettier-config",
+  "lint-staged": {
+    "**/*.{ts,js,json}": "prettier --write",
+    "**/*.js": "eslint --fix"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/philihp/nanbox.git"
@@ -40,18 +48,18 @@
   },
   "homepage": "https://github.com/philihp/nanbox#readme",
   "devDependencies": {
-    "@eslint/js": "9.7.0",
+    "@eslint/js": "10.0.1",
     "@philihp/prettier-config": "1.0.0",
-    "esbuild": "0.23.0",
-    "eslint": "9.7.0",
-    "globals": "15.8.0",
-    "husky": "9.1.1",
-    "lint-staged": "15.2.7",
-    "prettier": "3.3.3",
-    "tsup": "8.2.2",
-    "typescript": "5.5.3"
+    "@types/node": "22.19.20",
+    "eslint": "10.4.1",
+    "globals": "17.6.0",
+    "husky": "9.1.7",
+    "lint-staged": "17.0.7",
+    "prettier": "3.8.4",
+    "tsup": "8.5.1",
+    "typescript": "6.0.3"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.6.0"
   }
 }
