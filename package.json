@@ -55,7 +55,7 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@philihp/prettier-config": "1.0.0",
-    "@types/node": "24.13.6",
+    "@types/node": "24.19.0",
     "eslint": "10.11.0",
     "globals": "17.12.0",
     "husky": "9.1.7",
