@@ -11,8 +11,8 @@
     "typecheck": "tsc --noEmit",
     "pretty": "prettier --write **/*.{ts,js,json}",
     "release": "np",
-    "test": "node --experimental-strip-types --test src/**/__tests__/*.test.ts",
-    "test:coverage": "node --experimental-strip-types --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=coverage.lcov --test-reporter=spec --test-reporter-destination=stdout src/**/__tests__/*.test.ts"
+    "test": "node --test \"src/**/__tests__/*.test.ts\"",
+    "test:coverage": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=coverage.lcov --test-reporter=spec --test-reporter-destination=stdout \"src/**/__tests__/*.test.ts\""
   },
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
