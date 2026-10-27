@@ -4,7 +4,7 @@
   "description": "Encode hidden data within NaN IEEE 754 floats",
   "type": "module",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "build": "tsdown",
     "prepare": "husky",
     "prepublishOnly": "npm run build",
     "lint": "eslint",
@@ -52,6 +52,18 @@
     "url": "https://github.com/philihp/nanbox/issues"
   },
   "homepage": "https://github.com/philihp/nanbox#readme",
+  "tsdown": {
+    "entry": "src/index.ts",
+    "format": [
+      "esm",
+      "cjs"
+    ],
+    "dts": true,
+    "fixedExtension": false,
+    "outputOptions": {
+      "exports": "named"
+    }
+  },
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@philihp/prettier-config": "1.0.0",
@@ -61,7 +73,7 @@
     "husky": "9.1.7",
     "lint-staged": "17.6.0",
     "prettier": "3.9.10",
-    "tsup": "9.0.0",
+    "tsdown": "0.23.2",
     "typescript": "7.0.2"
   },
   "engines": {
