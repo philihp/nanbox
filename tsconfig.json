@@ -7,8 +7,9 @@
     "verbatimModuleSyntax": true,
     "allowImportingTsExtensions": true,
     "noEmit": true,
-    // tsup's dts build sets the baseUrl option, which TS 6 errors on without this
-    "ignoreDeprecations": "6.0",
+    // lets tsdown emit .d.ts with Oxc, because TS 7 has no compiler API for it to use
+    "declaration": true,
+    "isolatedDeclarations": true,
     "types": ["node"]
   },
   "include": ["src"]
